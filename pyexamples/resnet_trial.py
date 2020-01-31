@@ -14,7 +14,7 @@ arch = [
     to_input( './M87_internet.jpg' ),
 
     #block-001
-    to_ConvRes("conv1", 112, 64, offset="(0,0,0)", to="(0,0,0)", height=64, depth=64, width=2 ),
+    to_Conv("conv1", 112, 64, offset="(0,0,0)", to="(0,0,0)", height=64, depth=64, width=2 ),
     to_Pool("pool1", offset="(0,0,0)", to="(conv1-east)"),
     to_Conv("conv2", 56, 64, offset="(1,0,0)", to="(pool1-east)", height=32, depth=32, width=2 ),
     #to_connection( "pool1", "conv2"),
