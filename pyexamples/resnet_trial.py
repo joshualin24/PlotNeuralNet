@@ -10,7 +10,8 @@ arch = [
     to_begin(),
 
     #input
-    to_input( '../examples/fcn8s/cats.jpg' ),
+    #to_input( '../examples/fcn8s/cats.jpg' ),
+    to_input( './M87_example.png' ),
 
     #block-001
     to_Conv("conv1", 112, 64, offset="(0,0,0)", to="(0,0,0)", height=64, depth=64, width=2 ),
