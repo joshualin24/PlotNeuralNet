@@ -25,7 +25,9 @@ arch = [
     to_Pool("pool4", offset="(0,0,0)", to="(conv4-east)", height=28, depth=28, width=1),
     to_Conv("conv5", 7, 512, offset="(1,0,0)", to="(pool4-east)", height=32, depth=32, width=16 ),
     to_Pool("pool5", offset="(0,0,0)", to="(conv5-east)", height=28, depth=28, width=1),
-    to_SoftMax("soft1", 10 ,"(3,0,0)", "(pool5-east)", caption="SOFT"  ),
+    to_SoftMax("soft1", 512 ,"(3,0,0)", "(pool5-east)", caption="avg pool"  ),
+    to_SoftMax("soft2", 1000 ,"(3,0,0)", "(soft1-east)", caption="Fully connected"  ),
+    to_SoftMax("soft3", 6 ,"(3,0,0)", "(soft2-east)", caption="Output parameters"  ),
     #to_connection("pool3", "soft1"),
     to_end()
     ]
