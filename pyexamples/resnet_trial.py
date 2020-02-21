@@ -41,6 +41,8 @@ arch = [
     #to_connection( "conv3", "conv4"),
     #to_connection( "conv4", "conv5"),
     to_connection( "conv5", "soft1"),
+    to_connection( "soft1", "soft2"),
+    to_connection( "soft2", "soft3"),
     #to_skip( "conv2", "node2", pos=1.25),
     #to_skip( "conv3", "conv4", pos=1.25),
     #to_skip( "conv4", "conv5", pos=1.25),
