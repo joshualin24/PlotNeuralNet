@@ -35,9 +35,8 @@ arch = [
     to_node(name="node3", offset="(0,0,0)", to="(conv3-east)", opacity=0.5 ),
     to_node(name="node4", offset="(0,0,0)", to="(conv4-east)", opacity=0.5 ),
     to_node(name="node5", offset="(0,0,0)", to="(conv4-east)", opacity=0.5 ),
-
     to_connection( "conv1", "conv2"),
-    to_skip( "conv2", "conv3", pos=1.25),
+    to_skip( "conv2", "node2", pos=1.25),
     to_skip( "conv3", "conv4", pos=1.25),
     to_skip( "conv4", "conv5", pos=1.25),
     #to_connection_choose( "conv3", "node1"),
