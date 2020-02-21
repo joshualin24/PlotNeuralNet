@@ -31,7 +31,11 @@ arch = [
     to_SoftMax("soft2", 1000 ,"(3,0,0)", "(soft1-east)", caption="Fully connected"  ),
     #to_connection( "soft2", "soft3"),
     to_SoftMax("soft3", 7 ,"(3,0,0)", "(soft2-east)", width=6, caption="Output parameters"  ),
-    to_node(name="node1", offset="(0,0,0)", to="(conv2-east)", opacity=0.5 ),
+    to_node(name="node2", offset="(0,0,0)", to="(conv2-east)", opacity=0.5 ),
+    to_node(name="node3", offset="(0,0,0)", to="(conv3-east)", opacity=0.5 ),
+    to_node(name="node4", offset="(0,0,0)", to="(conv4-east)", opacity=0.5 ),
+    to_node(name="node5", offset="(0,0,0)", to="(conv4-east)", opacity=0.5 ),
+
     to_connection( "conv1", "conv2"),
     to_skip( "conv2", "conv3", pos=1.25),
     to_skip( "conv3", "conv4", pos=1.25),
