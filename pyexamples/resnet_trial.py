@@ -14,7 +14,7 @@ arch = [
     to_input( './M87_internet.jpg' ),
 
     #block-001
-    to_Conv("conv1", 112, 64, offset="(0,0,0)", to="(0,0,0)", height=64, depth=64, width=2 ),
+    to_Conv("conv1", 112, 64, offset="(0,0,0)", to="(0,0,0)", height=32, depth=32, width=2 ),
     to_Pool("pool1", offset="(0,0,0)", to="(conv1-east)"),
     to_Conv("conv2", 56, 64, offset="(1,0,0)", to="(pool1-east)", height=32, depth=32, width=2 ),
     #to_connection( "pool1", "conv2"),
@@ -29,7 +29,11 @@ arch = [
     #to_inputo_connection( "soft1", "soft2"),
     to_SoftMax("soft2", 1000 ,"(3,0,0)", "(soft1-east)", caption="Fully connected"  ),
     #to_connection( "soft2", "soft3"),
-    to_SoftMax("soft3", 6 ,"(3,0,0)", "(soft2-east)", width=6, caption="Output parameters"  ),
+    to_SoftMax("soft3", 7 ,"(3,0,0)", "(soft2-east)", width=6, caption="Output parameters"  ),
+    to_node(name="node1", offset="(0,0,0)", to="(conv2-east)", opacity=0.5 ),
+    to_connection( "conv1", "conv2"),
+    to_skip( "conv1", "conv2", pos=1.25),
+    #to_connection_choose( "conv3", "node1"),
     #to_connection("pool3", "soft1"),
     to_end()
     ]
