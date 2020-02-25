@@ -11,9 +11,9 @@ arch = [
     #input
     #to_input( '../examples/fcn8s/cats.jpg' ),
     to_input( './I.png' ),
-    # to_input( './Q.png' ),
-    # to_input( './U.png' ),
-    # to_input( './V.png' ),
+    to_input( './Q.png' ),
+    to_input( './U.png' ),
+    to_input( './V.png' ),
 
     #block-001
 
