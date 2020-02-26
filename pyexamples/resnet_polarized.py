@@ -11,7 +11,7 @@ arch = [
     #input
     #to_input( '../examples/fcn8s/cats.jpg' ),
 
-    to_input( './V.png', to='(-6,0,0)' ),
+    to_multiple_input( './V.png', to='(-6,0,0)' ),
     to_input( './U.png', to='(-5,0,0)' ),
     to_input( './Q.png', to='(-4,0,0)' ),
     to_input( './I.png', to='(-3,0,0)' ),
