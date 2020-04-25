@@ -13,7 +13,7 @@ arch = [
 
     #to_multiple_input( './V.png', to='(-6,0,0)' ),
     #to_multiple_input( './U.png', to='(-5,0,0)' ),
-    to_multiple_input( './light_curve.png', to='(-6,0,0)' ),
+    #to_multiple_input( './light_curve.png', to='(-6,0,0)' ),
     #to_connection( "(-6,0,0)", "(-3,0,0)"),
     to_input( './2d_lc_image.png', to='(-3,0,0)' ),
 
