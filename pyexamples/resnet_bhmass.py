@@ -13,7 +13,8 @@ arch = [
 
     #to_multiple_input( './V.png', to='(-6,0,0)' ),
     #to_multiple_input( './U.png', to='(-5,0,0)' ),
-    to_multiple_input( './light_curve.png', to='(-4,0,0)' ),
+    to_multiple_input( './light_curve.png', to='(-6,0,0)' ),
+    #to_connection( "(-6,0,0)", "(-3,0,0)"),
     to_input( './2d_lc_image.png', to='(-3,0,0)' ),
 
     #block-001
@@ -33,9 +34,9 @@ arch = [
     #to_Pool("pool5", offset="(0,0,0)", to="(conv5-east)", height=16, depth=16, width=1),
     to_SoftMax("soft1", 512 ,"(3,0,0)", "(pool5-east)", caption="avg pool"  ),
     #to_inputo_connection( "soft1", "soft2"),
-    to_SoftMax("soft2", 1000 ,"(3,0,0)", "(soft1-east)", caption="Fully connected"  ),
+    #to_SoftMax("soft2", 1000 ,"(3,0,0)", "(soft1-east)", caption="Fully connected"  ),
     #to_connection( "soft2", "soft3"),
-    to_SoftMax("soft3", 7 ,"(3,0,0)", "(soft2-east)", width=6, caption="Output parameters"  ),
+    to_SoftMax("soft3", 2 ,"(3,0,0)", "(soft1-east)", width=6, caption="AGN mass/redshift"  ),
     #to_node(name="node2", offset="(1,0,0)", to="(conv2-east)", opacity=0.5 ),
     #to_node(name="node3", offset="(1,0,0)", to="(conv3-east)", opacity=0.5 ),
     #to_node(name="node4", offset="(1,0,0)", to="(conv4-east)", opacity=0.5 ),
@@ -45,8 +46,8 @@ arch = [
     #to_connection( "conv3", "conv4"),
     #to_connection( "conv4", "conv5"),
     to_connection( "conv5", "soft1"),
-    to_connection( "soft1", "soft2"),
-    to_connection( "soft2", "soft3"),
+    #to_connection( "soft1", "soft2"),
+    to_connection( "soft1", "soft3"),
     #to_skip( "conv2", "node2", pos=1.25),
     #to_skip( "conv3", "conv4", pos=1.25),
     #to_skip( "conv4", "conv5", pos=1.25),
