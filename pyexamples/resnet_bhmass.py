@@ -36,7 +36,7 @@ arch = [
     #to_inputo_connection( "soft1", "soft2"),
     #to_SoftMax("soft2", 1000 ,"(3,0,0)", "(soft1-east)", caption="Fully connected"  ),
     #to_connection( "soft2", "soft3"),
-    to_SoftMax("soft3", 2 ,"(3,0,0)", "(soft1-east)", width=6, caption="AGN mass/redshift"  ),
+    to_SoftMax("soft3", 2 ,"(3,0,0)", "(soft1-east)", width=2, caption="SMBH Mass and Redshift"  ),
     #to_node(name="node2", offset="(1,0,0)", to="(conv2-east)", opacity=0.5 ),
     #to_node(name="node3", offset="(1,0,0)", to="(conv3-east)", opacity=0.5 ),
     #to_node(name="node4", offset="(1,0,0)", to="(conv4-east)", opacity=0.5 ),
