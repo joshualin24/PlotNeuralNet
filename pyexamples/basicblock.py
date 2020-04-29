@@ -16,6 +16,7 @@ arch = [
     #block-001
     # to_skip( "conv2", "conv3", pos=1.25),
     #to_skip( "conv3", "conv4", pos=1.25),
+    to_Conv("output1", 112, 64, offset="(0,0,0)", to="(-1,0,0)", height=28, depth=28, width=2, caption="intermediate putput" ),
     to_Conv("conv1", 112, 64, offset="(0,0,0)", to="(0,0,0)", height=28, depth=28, width=2, caption="3x3 conv" ),
     #block_Res(4, "basic_block", 'conv1', 'poo1'),
     to_Pool("pool1", offset="(0,0,0)", to="(conv1-east)"),
