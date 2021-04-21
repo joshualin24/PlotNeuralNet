@@ -36,7 +36,7 @@ arch = [
     #to_inputo_connection( "soft1", "soft2"),
     to_SoftMax("soft2", 10 ,"(3,0,0)", "(soft1-east)", caption="Encoded \n info"  ),
     #to_connection( "soft2", "soft3"),
-    to_SoftMax("soft3", 2 ,"(3,0,0)", "(soft2-east)", width=2, caption="SMBH \n (M and z)"  ),
+    to_SoftMax("soft3", 2 ,"(3,0,0)", "(soft2-east)", width=2, caption="SMBH \n(M/z)"  ),
     #to_node(name="node2", offset="(1,0,0)", to="(conv2-east)", opacity=0.5 ),
     #to_node(name="node3", offset="(1,0,0)", to="(conv3-east)", opacity=0.5 ),
     #to_node(name="node4", offset="(1,0,0)", to="(conv4-east)", opacity=0.5 ),
