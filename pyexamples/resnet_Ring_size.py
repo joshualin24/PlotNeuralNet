@@ -11,7 +11,7 @@ arch = [
     #input
     #to_input( '../examples/fcn8s/cats.jpg' ),
     to_input( './M87_internet.jpg' ),
-    to_input( './I_0_full_resolution.png' ),
+    to_input( './Noisy_blur_I.png' ),
 
     #block-001
 
